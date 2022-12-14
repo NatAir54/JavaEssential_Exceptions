@@ -9,26 +9,26 @@ public class MainApp {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter the first number:");
-        calculator.number1 = input.nextDouble();
+        calculator.numberFirst = input.nextDouble();
 
         System.out.println("Enter the second number:");
-        calculator.number2 = input.nextDouble();
+        calculator.numberSecond = input.nextDouble();
 
         System.out.println("Choose an operator: +, -, *, or /");
         calculator.operator = input.next();
 
         switch (calculator.operator) {
             case "+":
-                System.out.println(calculator.addition(calculator.number1, calculator.number2));
+                System.out.println(calculator.addition(calculator.numberFirst, calculator.numberSecond));
                 break;
             case "-":
-                System.out.println(calculator.subtraction(calculator.number1, calculator.number2));
+                System.out.println(calculator.subtraction(calculator.numberFirst, calculator.numberSecond));
                 break;
             case "*":
-                System.out.println(calculator.multiplication(calculator.number1, calculator.number2));
+                System.out.println(calculator.multiplication(calculator.numberFirst, calculator.numberSecond));
                 break;
             case "/":
-                System.out.println(calculator.division(calculator.number1, calculator.number2));
+                System.out.println(calculator.division(calculator.numberFirst, calculator.numberSecond));
                 break;
             default:
                 System.out.println("This is a wrong operator.");

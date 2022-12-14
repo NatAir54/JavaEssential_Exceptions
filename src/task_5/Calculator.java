@@ -5,33 +5,30 @@ import java.util.Scanner;
 public class Calculator {
     String operator;
     double solution;
-    double number1, number2;
+    double numberFirst, numberSecond;
 
     public Calculator() {
         solution = 0.0;
     }
 
-    public double addition (double number1, double number2) {
-        return number1 + number2;
+    public double addition (double numberFirst, double numberSecond) {
+        return numberFirst + numberSecond;
     }
 
-    public double subtraction (double number1, double number2) {
-        return number1 - number2;
+    public double subtraction (double numberFirst, double numberSecond) {
+        return numberFirst - numberSecond;
     }
 
-    public double multiplication (double number1, double number2) {
-        return number1 * number2;
+    public double multiplication (double numberFirst, double numberSecond) {
+        return numberFirst * numberSecond;
     }
 
-    public double division (double number1, double number2) {
-        if ( number2 == 0 ) {
+    public double division (double numberFirst, double numberSecond) {
+        if ( numberSecond == 0 ) {
             throw new IllegalArgumentException("Divisor can never be zero");
         }
-        else {
-            solution = Double.valueOf(number1)/Double.valueOf(number2);
-        }
+        solution = Double.valueOf(numberFirst)/Double.valueOf(numberSecond);
         return solution;
     }
-
 
 }

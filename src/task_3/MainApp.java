@@ -28,8 +28,8 @@ public class MainApp {
         // sorting the array by store name
         Arrays.sort(prices, new Comparator<Price>() {
             @Override
-            public int compare(Price o1, Price o2) {
-                return o1.getStore().compareTo(o2.getStore());
+            public int compare(Price priceFirst, Price priceSecond) {
+                return priceFirst.getStore().compareTo(priceSecond.getStore());
             }
         });
         System.out.println(Arrays.deepToString(prices));

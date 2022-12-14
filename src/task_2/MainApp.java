@@ -32,8 +32,8 @@ public class MainApp {
         // sorting the array by fullName
         Arrays.sort(staff, new Comparator<Worker>() {
             @Override
-            public int compare(Worker o1, Worker o2) {
-                return o1.getFullName().compareTo(o2.getFullName());
+            public int compare(Worker workerFirst, Worker workerSecond) {
+                return workerFirst.getFullName().compareTo(workerSecond.getFullName());
             }
         });
         System.out.println(Arrays.deepToString(staff));
@@ -64,11 +64,11 @@ public class MainApp {
             return false;
         }
 
-        SimpleDateFormat sdf = new SimpleDateFormat(yearFormat);
-        sdf.setLenient(false);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(yearFormat);
+        simpleDateFormat.setLenient(false);
 
         try {
-            Date date = sdf.parse(yearToValidate);
+            Date date = simpleDateFormat.parse(yearToValidate);
         }
         catch (ParseException e) {
             e.printStackTrace();
